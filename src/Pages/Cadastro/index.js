@@ -36,7 +36,9 @@ const Cadastro = () => {
       setLoading(false)
     }
     catch (err) {
-      alert('Algo deu errado com o Cadastro' + err)
+      alert('Algo deu errado com o Cadastro' + err);      
+      setTimeout( () =>{ window.location.reload();
+      }, "3000");
     }
   }
 

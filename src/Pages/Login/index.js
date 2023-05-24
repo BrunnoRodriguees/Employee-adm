@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 import { Container, Form, SubContainerSign } from './styles'
 import Input from '../../Components/Input/index'
 import Botao from '../../Components/Botao/index'
@@ -16,9 +16,11 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
+      console.log("debbug");
       setLoading(true)
       const response = await userService.login(form)
       console.log('response do Login', response)
+      // response === true
       if (response === true) {
         alert('usuário Logado com Sucesso')
         navigate('/home')
@@ -26,7 +28,10 @@ const Login = () => {
       setLoading(false)
     }
     catch (err) {
-      alert('Algo deu errado com o Login' + err)
+      alert('Algo deu errado com o Cadastro' + err);      
+      setTimeout( () =>{ window.location.reload();
+      }, "3000");
+
     }
   }
 
