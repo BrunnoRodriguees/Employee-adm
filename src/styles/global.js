@@ -1,18 +1,30 @@
 import { createGlobalStyle } from "styled-components";
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 
 const GlobalStyle = createGlobalStyle`
 
   * {
-    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
     padding: 0;
     box-sizing: border-box; 
+    width: 100%
+    max-width: 980px;
+    
   }
 
   body {
-    width: 100vw;
-    height: 100vh;
-    background-color: #f0f2f5;
-    font-family: Poppins
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%
+    max-width: 980px;
+    margin: auto;
 
   }
 

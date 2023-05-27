@@ -1,5 +1,5 @@
 import React from 'react'
-import Login from '../Pages/Login/index'
+import LoginEmployeeAdmin from '../Pages/LoginEmployeeAdmin/loginEmployeeAdmin'
 import ProtectedRoutes from '../Routes/ProtectedRoutes'
 import Cadastro from '../Pages/Cadastro/index'
 
@@ -9,7 +9,7 @@ const Routering = () => {
   return ( 
     <Router>
       <Routes>
-        <Route path="*" element={<Login/>} />
+        <Route path="*" element={<LoginEmployeeAdmin/>} />
         <Route path="/cadastrar" element={<Cadastro/>} />
         <Route path="/home" element={
           <ProtectedRoutes>

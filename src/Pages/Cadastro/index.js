@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 import { Container, Form, SubContainerSign } from './styles'
 import Input from '../../Components/Input/index'
 import Botao from '../../Components/Botao/index'
@@ -57,45 +57,46 @@ const Cadastro = () => {
   return (
     <Container>
       <Form>
-        <h1>Faça o seu Cadastro 👋</h1>
+        <h1>EMPLOYEE ADMINISTRATION </h1>
+        <p>Register</p>
         <Input
           name='nome'
-          placeholder='Digite o seu nome'
+          placeholder='Enter your name'
           onChange={handleChange}
           type='text'
         />
         <Input
           name='telefone'
-          placeholder='Digite o seu telefone'
+          placeholder='Enter your phone'
           onChange={handleChange}
           type='number'
         />
         <Input
           name='email'
-          placeholder='Digite o seu e-mail'
+          placeholder='Enter your email'
           onChange={handleChange}
           type='email'
         />
         <Input
           name='password'
-          placeholder='Digite a sua senha'
+          placeholder='Enter your password'
           onChange={handleChange}
           type='password'
         />
         <Input
           name='confirmarPassword'
-          placeholder='Confirme a sua senha'
+          placeholder='Confirm your password'
           onChange={handleChange}
           type='password'
         />
         <Botao
           type='submit'
-          text='Efetuar Cadastro!'
+          text='Register'
           onClick={handleSubmit}
           disabled={loading === true || !validadorInput()}
         />
         <SubContainerSign>
-          <p>Já possui conta?</p>
+          <p>Already have an account?</p>
           <NavLink to="*">Login</NavLink>
         </SubContainerSign>
       </Form>

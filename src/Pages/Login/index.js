@@ -46,28 +46,29 @@ const Login = () => {
   return (
     <Container>
       <Form>
-        <h1>Faça o seu Login 👋</h1>
+        <h1>EMPLOYEE ADMINISTRATION</h1>
+        
         <Input
           name='email'
-          placeholder='Digite o seu e-mail'
+          placeholder='Enter your email'
           onChange={handleChange}
           type='email'
         />
         <Input
           name='password'
-          placeholder='Digite a sua senha'
+          placeholder='Enter your password'
           onChange={handleChange}
           type='password'
         />
         <Botao
           type='submit'
-          text='Entrar!'
+          text='LOGIN'
           onClick={handleSubmit}
           disabled={loading === true || !validadorInput()}
         />
         <SubContainerSign>
-          <p>Não possui conta?</p>
-          <NavLink to="cadastrar">Cadastrar</NavLink>
+          <p>No registration?</p>
+          <NavLink to="cadastrar">Register</NavLink>
         </SubContainerSign>
       </Form>
     </Container>
